@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="head">*** Employee Details ***</h1>
+    </header>
+    <form action="">
+    <ul class="readingContainer">
+      <li>
+        <label for="EmployeeName">Employee Name <span>*</span></label>
+        <input type="text" id="eName" maxlength="20" name="EmployeeName" />
+      </li>
+      <li>
+        <label for="EmployeeAge">Employee Age <span>*</span></label>
+        <input type="text" id="eAge" maxlength="2" name="EmployeeAge" />
+      </li>
+      <li>
+        <label for="gender">Gender :</label>
+        <input type="radio" id="egender" name="gender" value="male" /><span>Male</span>
+        <input type="radio" id="egender" name="gender" value="female" /><span>Female</span>
+      </li>
+      <li>
+        <label for="state"> State :</label>
+        <select class="dropdown" name="" id="estate">
+          <option value="" selected>Select your State</option>
+          <option value="Telangana">Telangana</option>
+          <option value="AndhraPradesh">Andhra Pradesh</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="MadhyaPradesh">Madhya Pradesh</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Goa">Goa</option>
+        </select>
+      </li>
+      <li>
+        <label for="department"> Department :</label>
+        <select class="dropdown" name="" id="edepartment">
+          <option value="" selected>Select Your Department</option>
+          <option value="Hr">Hr</option>
+          <option value="IT">IT</option>
+          <option value="FrontEnd">FrontEnd</option>
+          <option value="BackEnd">BackEnd</option>
+          <option value="Accountant">Accountant</option>
+        </select>
+      </li>
+      <li>
+        <label for="Employeebsalry">Basic Salary :</label>
+        <input type="text" id="ebSalry" maxlength="8" name="Employeebsalry" />
+      </li>
+      <li>
+        <input type="button" class="btn1" value="Generate Pay Slip" onclick="readEmployeDetails()"/>
+        <input type="reset" class="btn2" value="Reset" onclick="handleReset()"/>
+      </li>
+    </ul>
+    </form>
+
+    <hr>
+        <div class="payslip">
+            <h3 class="paySlipHeader">Your Pay-Slip</h3>
+            <ul class="employeeform">
+                <li>
+                    Employee name is <span id="ename"></span>
+                </li>
+                <li>
+                    Employee Age is <span id="eage"></span>
+                </li>
+                <li>
+                    Gender is <span id="egen"></span>
+                </li>
+                <li>
+                    State is <span id="estate1"></span>
+                </li>
+                <li>
+                    Employee Department is <span id="edepart"></span>
+                </li>
+                <li>
+                    Basic Salary is <span id="ebsalary"></span>
+                </li>
+                <li>
+                    pf is  <span id="epf"></span>
+                </li>
+                <li>
+                    HRA is  <span id="ehra"></span>
+                </li>
+                <li>
+                    Total Salary is  <span id="etsal"></span>
+                </li>
+                <li>
+                    Tax to be paid is <span id="etaxp"></span>
+                </li>
+                <li>
+                    On Hand Salary is ****<span id="ehandsal"></span>****
+                </li>
+            </ul>
+        </div>
+  </body>
+</html>
